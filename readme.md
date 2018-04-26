@@ -1,59 +1,113 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
+<h1 align="center">Laravel 5.6 CRUD app</h1>
+<br>
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+  <a href="https://laravel.com/">
+    <img alt="Laravel" title="Laravel" src="https://cdn-images-1.medium.com/max/720/1*hUuioUcs_0tzu7mMwr9udA.png" width="310">
+  </a>
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/laravel-v5.6-green.svg" />
+    <img src="https://img.shields.io/badge/bootstrap-v4.0.0-green.svg" />
 </p>
 
-## About Laravel
+## Table of Contents
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+- [Introduction](#introduction)
+- [Built With](#built-with)
+- [Install](#install)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Introduction
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+A Laravel 5.6 CRUD application, which showcases widley used CRUD features. Uses minimal bootstrap styling. Requires a MYSQL table to store data. 
 
-## Learning Laravel
+## Built-With
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+- Laravel v5.6
+- Bootstrap v4.0.0
+- MySQL
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## Install 
 
-## Laravel Sponsors
+* Install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">x-code</a>.
+* Install homebrew.
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+* Clone the Git <a href="https://github.com/maxsilvauk/laravel-crud.git">repository</a> into your htdocs.
+```
+git clone https://github.com/maxsilvauk/laravel-crud.git
+```
+* Move to the laravel root folder.
+```
+cd laravel_crud
+```
+* Install composer globally (You will need PHP installed).
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+* Move the composer and install dependances.
+```
+mv composer.phar /usr/local/bin/composer
+composer install
+```
+* Create a .env file for Laravel
+```
+touch .woo && vi .woo i
+```
+* Type the following, once entered press ESC to exist insert mode then :x to save the file.
+```
+APP_NAME="Laravel CRUD"
+APP_ENV=local
+APP_KEY=base64:EslUg/T3QR6T0GnMbc4v9/lrAIgF8/KoQMs9z2t2x/s=
+APP_DEBUG=true
+APP_URL=http://localhost
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+LOG_CHANNEL=stack
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_crud
+DB_USERNAME=YOUR_MYSQL_USERNAME
+DB_PASSWORD=YOUR_MYSQL_PASS
 
-## Contributing
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+QUEUE_DRIVER=sync
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
 
-## Security Vulnerabilities
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=mt1
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+```
+* Create a MySQL database called 'laravel_crud' and migrate the tables.
+```
+php artisan migrate
+```
+* Run the development server.
+```
+php artisan serve
+```
+* Locate the application in the browser.
+```
+http://localhost:8000
+```
