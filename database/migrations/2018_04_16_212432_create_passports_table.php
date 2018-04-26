@@ -18,7 +18,7 @@ class CreatePassportsTable extends Migration
             $table->string('name');
             $table->integer('date');
             $table->string('email')->unique();
-            $table->integer('number');
+            $table->string('number');
             $table->string('office');
             $table->string('filename');
             $table->timestamps();
