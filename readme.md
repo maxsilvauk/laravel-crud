@@ -28,12 +28,7 @@ A Laravel 5.6 CRUD application, which showcases widley used CRUD features. Uses 
 
 ## Install 
 
-* Install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">x-code</a>.
-* Install homebrew.
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-* Clone the Git <a href="https://github.com/maxsilvauk/laravel-crud.git">repository</a> into your htdocs.
+* Clone my Git <a href="https://github.com/maxsilvauk/laravel-crud.git">repository</a> into your htdocs.
 ```
 git clone https://github.com/maxsilvauk/laravel-crud.git
 ```
